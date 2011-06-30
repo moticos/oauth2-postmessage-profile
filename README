@@ -1,0 +1,72 @@
+Copyright 2011 Google Inc. All Rights Reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+
+OAuth2 PostMessage Flow
+
+Implementation of a postMessage-based secure channel for cross-domain
+communication for OAuth2. Written in Javascript.
+
+Project homepage:
+http://code.google.com/p/oauth2-postmessage-profile/
+
+Discussion:
+https://groups.google.com/group/oauth2-postmessage-profile
+
+
+Dependencies:
+
+The library depends upon but does not include the following features
+from the Apache Shindig project:
+
+gadgets.rpc: an abstraction of postMessage with some additional
+    portability to pre-postMessage browsers.
+
+shindig.random: a pseudo-random number generator better than
+    Math.random().
+
+shindig.uri: URI parsing library.
+
+
+File overview:
+
+COPYING: A copy of the Apache License, Version 2.0.
+
+src/client: This directory contains a library implementing the client
+    (relying party) side of the proposed OAuth 2 PostMessage Flow.
+
+examples/app: This directory contains an example application using the
+    OAuth 2 postMessage flow. The example application fetches a copy
+    of the required Shindig features from a Google web server at
+    runtime. To run this sample you will need to sign up for a new
+    OAuth 2 client ID, enable the Buzz API, and set app.config.CLIENT
+    in examples/app/app_config.js to match.
+
+    See documentation for Google's experimental OAuth 2 implementation
+    here:
+
+    http://code.google.com/apis/accounts/docs/OAuth2.html
+
+    You will need to follow the instructions in the "Registering your
+    app with Google" section and you will need to enable the
+    experimental Google Buzz API for your app. See
+
+    http://code.google.com/apis/buzz/docs/
+
+    for more information on the Google Buzz API.
+
+examples/cfg: This directory contains sample configuration information
+    for the client library to use Google's OAuth 2 servers and the
+    Google Buzz API. You will need to modify this configuration to use
+    a different identity provider.
