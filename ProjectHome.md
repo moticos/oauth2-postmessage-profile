@@ -1,0 +1,1 @@
+Implementation of a postMessage-based secure channel for cross-domain communication for OAuth2. Written in Javascript.
